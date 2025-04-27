@@ -1,6 +1,5 @@
 import logging
 import sys
-import typing
 
 import pycdlib
 
@@ -10,7 +9,7 @@ logging.basicConfig(level=logging.DEBUG)
 
 def main():
     iso = pycdlib.PyCdlib()
-    with open("/dev/sr0", "rb", buffering=0) as fp:
+    with open(sys.argv[1], "rb", buffering=0) as fp:
         fp = TracingIO(fp)
         iso.open_fp(fp)
 

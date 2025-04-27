@@ -11,8 +11,7 @@ from isorescue.parse import (
     parse_directory_record,
     DirectoryRecord,
 )
-
-from t2 import TracingIO
+from isorescue.tracing_io import TracingIO
 
 logger = logging.getLogger("isorescue")
 
@@ -24,6 +23,8 @@ def walk_tree(
         logger.debug("parse_record: %d [%02x]", offset, offset)
         record = parse_directory_record(buf[offset:])
         logger.debug("record: %s", record)
+
+        # handle zero-padded and skipped to next sector
         if record is None:
             break
 
