@@ -1,0 +1,19 @@
+[project]
+name = "isorescue"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+authors = [
+    { name = "thewisenerd", email = "thewisenerd@protonmail.com" }
+]
+requires-python = ">=3.13"
+dependencies = [
+    "pycdlib>=1.14.0",
+]
+
+[project.scripts]
+isorescue = "isorescue:main"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"

@@ -1,0 +1,12 @@
+- [ ] read directory trees
+    - [x] parse tree
+    - [ ] create tree hierarchy
+- [ ] safe read
+    - [ ] sector size id
+    - [ ] read interface
+        - [ ] scsi with timeouts (check readcd)
+        - [ ] fallback to block
+    - [ ] caching read
+- [ ] extension metadata
+    - [ ] joliet
+    - [ ] udf
